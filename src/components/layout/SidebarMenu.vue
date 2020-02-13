@@ -13,6 +13,12 @@
         <span class="page">Tables</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/jexcel">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">jexcel</span>
+      </a>
+    </router-link>
 
     <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">
