@@ -25,9 +25,9 @@ export default {
   },
   methods: {
     load() {
-      axios.get('http://localhost:8028/api/mahasiswa/').then(response => {
+      axios.get('http://10.199.14.46:8028/api/mahasiswa/').then(response => {
         var options = {
-          url: 'http://localhost:8028/api/mahasiswa/',
+          url: 'http://10.199.14.46:8028/api/mahasiswa/',
           data: response.data,
           oninsertrow: this.create,
           onchange: this.update,
@@ -51,15 +51,15 @@ export default {
       })
     },
     create() {
-      axios.post('http://localhost:8028/api/mahasiswa/', {nrp: '', nama: '', angkatan: '', jk: '', tgl: '', foto: '', aktif: ''}).then(res => {
+      axios.post('http://10.199.14.46:8028/api/mahasiswa/', {nrp: '', nama: '', angkatan: '', jk: '', tgl: '', foto: '', aktif: ''}).then(res => {
         console.log(res.data)
       })
     },
     update(instance, cell, columns, row, value) {
-      axios.get('http://localhost:8028/api/mahasiswa/').then(res => {
+      axios.get('http://10.199.14.46:8028/api/mahasiswa/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
-        axios.put('http://localhost:8028/api/mahasiswa/' + index[0], {
+        axios.put('http://10.199.14.46:8028/api/mahasiswa/' + index[0], {
           id: index[0],
           nrp: index[1],
           nama: index[2],
@@ -74,10 +74,10 @@ export default {
       })
     },
     delete(instance, row) {
-      axios.get('http://localhost:8028/api/mahasiswa/').then(res => {
+      axios.get('http://10.199.14.46:8028/api/mahasiswa/').then(res => {
         var index = Object.values(res.data[row])
         console.log(row)
-        axios.delete('http://localhost:8028/api/mahasiswa/' + index[0])
+        axios.delete('http://10.199.14.46:8028/api/mahasiswa/' + index[0])
       })
     }
   }
