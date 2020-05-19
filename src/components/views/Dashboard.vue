@@ -127,7 +127,6 @@ import Chart from 'chart.js'
 import Alert from '../widgets/Alert'
 import InfoBox from '../widgets/InfoBox'
 import ProcessInfoBox from '../widgets/ProcessInfoBox'
-
 export default {
   name: 'Dashboard',
   components: {
@@ -194,9 +193,7 @@ export default {
           }
         }
       }
-
       new Chart(ctx, config) // eslint-disable-line no-new
-
       var pieChartCanvas = document.getElementById('languagePie').getContext('2d')
       var pieConfig = {
         type: 'pie',
@@ -217,7 +214,6 @@ export default {
           }
         }
       }
-
       new Chart(pieChartCanvas, pieConfig) // eslint-disable-line no-new
     })
   }
@@ -234,5 +230,6 @@ export default {
 }
 .fullCanvas {
   width: 100%;
+  height: 100%;
 }
 </style>

@@ -26,6 +26,7 @@ import DosenView from './components/views/Dosen.vue'
 import PenelitianView from './components/views/Penelitian.vue'
 import AbmasView from './components/views/Abmas.vue'
 import PublikasiView from './components/views/Publikasi.vue'
+import KonkinView from './components/views/Konkin.vue'
 
 // Routes
 const routes = [
@@ -153,6 +154,11 @@ const routes = [
         component: PublikasiView,
         name: 'Publikasi',
         meta: {description: 'Simple and advance table in CoPilot'}
+      }, {
+        path: 'konkin',
+        component: KonkinView,
+        name: 'Kontrak Kinerja',
+        meta: {description: 'Kontrak Kinerja'}
       }
     ]
   }, {
