@@ -47,7 +47,7 @@
 import 'webdatarocks/webdatarocks.min.css'
 import axios from 'axios'
 // var host = 'http://10.199.14.46:8023/'
-var host = 'http://localhost:8023/'
+var host = 'http://localhost:8028/'
 export default {
   name: 'App',
   data() {
